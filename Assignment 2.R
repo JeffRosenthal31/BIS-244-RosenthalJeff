@@ -1,10 +1,10 @@
-df<-read_csv("covid-19-data/us-states.csv")
-install.packages("tidyverse")
-library("tidyverse")
-df<-df%>%filter(state=="Pennsylvania")
-df$adj_deaths<-df$deaths
-df$adj_deaths[47]<-
-  (df$adj_deaths[47]-282)
-df$adj_deaths[48]<-
-  (df$adj_deaths[48]-297)
+df<-read_csv("covid-19-data/us-states.csv") 
+install.packages("tidyverse") 
+library("tidyverse") 
+df<-df%>%filter(state=="Pennsylvania") 
+df$adj_deaths<-df$deaths 
+df$adj_deaths[47]<- 
+  (df$adj_deaths[47]-282) 
+df$adj_deaths[48]<- 
+  (df$adj_deaths[48]-297) 
 sum(df$adj_deaths)
